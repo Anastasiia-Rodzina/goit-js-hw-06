@@ -8,14 +8,13 @@ function handleSubmit(event) {
   const email = form.email;
   const password = form.password;
 
-  if (email.value === "" || password.value === "") {
+  if (email.value.trim() === "" || password.value.trim() === "") {
     return alert("Please fill in all the fields!");
-  } else {
-    const formObj = {
-      email: email.value,
-      password: password.value,
-    };
-    console.log(formObj);
   }
+  const formObj = {
+    email: email.value,
+    password: password.value,
+  };
+  console.log(formObj);
   event.currentTarget.reset();
 }

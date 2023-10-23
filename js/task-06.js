@@ -3,13 +3,15 @@ input.addEventListener("blur", blurBorder);
 
 function blurBorder(event) {
   const inputDataLength = Number(input.dataset.length);
-  const inputValueLength = Number(input.value.trim().length);
+  const inputValueLength = input.value.trim().length;
 
   if (inputValueLength === inputDataLength) {
-    input.classList.add("valid");
-    input.classList.remove("invalid");
+    useMethod("valid", "invalid");
   } else {
-    input.classList.remove("valid");
-    input.classList.add("invalid");
+    useMethod("invalid", "valid");
   }
+}
+function useMethod(a, b) {
+  input.classList.add(a);
+  input.classList.remove(b);
 }

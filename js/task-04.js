@@ -8,10 +8,8 @@ incBtn.addEventListener("click", incrementPressCounter);
 function decrementPressCounter() {
   counterValue -= 1;
   numberValue.textContent = counterValue;
-  console.log(numberValue.textContent);
 }
 function incrementPressCounter() {
   counterValue += 1;
   numberValue.textContent = counterValue;
-  console.log(numberValue.textContent);
 }

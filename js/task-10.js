@@ -13,7 +13,6 @@ inputNumber.addEventListener("input", toogleValue);
 let inputValue = 0;
 function toogleValue(event) {
   inputValue = inputNumber.value;
-  console.log(inputValue);
 }
 
 createBtn.addEventListener("click", () => {
